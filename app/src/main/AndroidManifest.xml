@@ -13,6 +13,12 @@
         android:theme="@style/Theme.MyHealth"
         tools:targetApi="31">
         <activity
+            android:name=".ActivityBookAppointment"
+            android:exported="false" />
+        <activity
+            android:name=".ActivityPatientData"
+            android:exported="false" />
+        <activity
             android:name=".MainActivity"
             android:exported="true">
             <intent-filter>

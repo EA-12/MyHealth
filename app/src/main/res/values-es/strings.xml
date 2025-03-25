@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">MyHealth</string>
+    <string name="datos_del_paciente">Datos del paciente</string>
+    <string name="peticion_cita">Petición de cita</string>
+</resources>

@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">MyHealth</string>
+    <string name="datos_del_paciente">Patient data</string>
+    <string name="peticion_cita">Book an appointment</string>
 </resources>
