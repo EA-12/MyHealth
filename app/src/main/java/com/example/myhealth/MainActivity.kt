@@ -27,4 +27,7 @@ class MainActivity : AppCompatActivity() {
         val intent = Intent(this, ActivityBookAppointment::class.java)
         startActivity(intent)
     }
+    fun goToMainActivity(view: View) {}
 }
+
+

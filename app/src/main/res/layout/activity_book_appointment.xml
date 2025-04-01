@@ -5,4 +5,70 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ActivityBookAppointment"/>
+    tools:context=".ActivityBookAppointment"
+    tools:ignore="ExtraText">
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/textInputLayout"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+        android:layout_width="395dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/timePickerId"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent">
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <TimePicker
+        android:id="@+id/timePickerId"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="370dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0"
+        android:contentDescription="@string/seleccione_la_hora"
+        tools:ignore="ExtraText"/>
+
+    <CalendarView
+        android:id="@+id/calendarView"
+        android:layout_width="327dp"
+        android:layout_height="320dp"
+        android:layout_marginTop="10dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/timePickerId"
+        app:layout_constraintVertical_bias="1.0"
+        android:contentDescription="@string/seleccione_una_fecha"
+    />
+
+    <Button
+        android:id="@+id/button3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="279dp"
+        android:layout_marginTop="26dp"
+        android:layout_marginEnd="42dp"
+        android:layout_marginBottom="7dp"
+        android:background="#673AB7"
+        android:backgroundTint="#F5F6F5FA"
+        android:contentDescription="@string/guardar_la_cita"
+        android:onClick="goToMainActivity"
+        android:text="@string/guardar"
+        android:textColor="#F6F1F1"
+        app:layout_constraintBottom_toTopOf="@+id/calendarView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.111"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/timePickerId"
+        app:layout_constraintVertical_bias="0.781"
+        app:rippleColor="#F6F2F2" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

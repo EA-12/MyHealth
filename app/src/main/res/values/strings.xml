@@ -2,4 +2,8 @@
     <string name="app_name">MyHealth</string>
     <string name="datos_del_paciente">Patient data</string>
     <string name="peticion_cita">Book an appointment</string>
+    <string name="guardar" />
+    <string name="guardar_la_cita">Guardar la cita</string>
+    <string name="seleccione_una_fecha">Seleccione una fecha</string>
+    <string name="seleccione_la_hora">Seleccione la hora</string>
 </resources>
