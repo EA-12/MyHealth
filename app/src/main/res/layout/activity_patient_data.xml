@@ -11,7 +11,93 @@
         android:id="@+id/textView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Patient data"
-        tools:layout_editor_absoluteX="178dp"
-        tools:layout_editor_absoluteY="344dp" />
+        android:layout_marginStart="147dp"
+        android:layout_marginTop="35dp"
+        android:layout_marginEnd="148dp"
+        android:layout_marginBottom="677dp"
+        android:text="@string/datos_de_paciente"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <EditText
+        android:id="@+id/editTextText"
+        android:layout_width="179dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="212dp"
+        android:ems="10"
+        android:inputType="text"
+        android:text="@string/nombre"
+        android:textSize="14sp"
+        app:layout_constraintBottom_toTopOf="@+id/editTextText2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView3" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="237dp"
+        android:layout_height="31dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="12dp"
+        android:layout_marginEnd="248dp"
+        android:text="@string/datos_personales"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toTopOf="@+id/editTextText"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+    <EditText
+        android:id="@+id/editTextText2"
+        android:layout_width="179dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="212dp"
+        android:ems="10"
+        android:inputType="text"
+        android:text="@string/dni"
+        android:textSize="14sp"
+        app:layout_constraintBottom_toTopOf="@+id/editTextText3"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editTextText" />
+
+    <EditText
+        android:id="@+id/editTextText3"
+        android:layout_width="179dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="4dp"
+        android:layout_marginEnd="212dp"
+        android:ems="10"
+        android:inputType="text"
+        android:text="@string/tlf_de_contacto"
+        android:textSize="14sp"
+        app:layout_constraintBottom_toTopOf="@+id/spinnerSexo"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editTextText2" />
+
+    <Spinner
+        android:id="@+id/spinnerSexo"
+        android:layout_width="369dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="26dp"
+        android:layout_marginBottom="437dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editTextText3" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

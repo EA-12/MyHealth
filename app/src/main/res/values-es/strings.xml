@@ -3,4 +3,14 @@
     <string name="app_name">MyHealth</string>
     <string name="datos_del_paciente">Datos del paciente</string>
     <string name="peticion_cita">Petición de cita</string>
+    <string name="guardar">Guardar_</string>
+    <string name="guardar_la_cita">Guardar la cita</string>
+    <string name="seleccione_una_fecha">Seleccione una fecha</string>
+    <string name="seleccione_la_hora">Seleccione una hora</string>
+    <string name="guardar_cita">Guardar</string>
+    <string name="datos_de_paciente">Datos del paciente</string>
+    <string name="nombre">Nombre</string>
+    <string name="datos_personales">Datos Personales</string>
+    <string name="dni">DNI</string>
+    <string name="tlf_de_contacto">Tlf de contacto</string>
 </resources>
