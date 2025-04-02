@@ -12,5 +12,10 @@
     <string name="datos_personales">Datos Personales</string>
     <string name="dni">DNI</string>
     <string name="tlf_de_contacto">Tlf de contacto</string>
+    <string name="direccion">Direccion</string>
+    <string name="pa_s">País</string>
+    <string name="codigo_postal">Codigo Postal</string>
+    <string name="via_y_numero">Via y Numero</string>
+    <string name="otros_escalera_piso_bloque">Otros(Escalera/Piso/Bloque)</string>
 
 </resources>
