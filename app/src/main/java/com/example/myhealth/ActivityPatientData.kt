@@ -1,17 +1,25 @@
 package com.example.myhealth
 
+import android.app.DatePickerDialog
+import android.content.Intent
 import android.os.Bundle
 import android.view.View
 import android.widget.AdapterView
 import android.widget.ArrayAdapter
+import android.widget.EditText
 import android.widget.Spinner
 import android.widget.Toast
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
+import java.text.SimpleDateFormat
+import java.util.*
 
 class ActivityPatientData : AppCompatActivity() {
+
+    private lateinit var editTextDate: EditText
+    private val calendar = Calendar.getInstance()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -26,7 +34,7 @@ class ActivityPatientData : AppCompatActivity() {
         }
 
         // Obtener el Spinner para seleccionar el sexo
-        val spinnerSexo: Spinner = findViewById(R.id.spinnerSexo) // Asegúrate de tener este Spinner en tu layout
+        val spinnerSexo: Spinner = findViewById(R.id.spinnerSex) // Asegúrate de tener este Spinner en tu layout
 
         // Crear un ArrayAdapter usando el array de opciones definido en strings.xml
         val adapterSexo = ArrayAdapter.createFromResource(
@@ -42,6 +50,7 @@ class ActivityPatientData : AppCompatActivity() {
         spinnerSexo.adapter = adapterSexo
 
         // Configurar el listener para detectar la selección
+        /*
         spinnerSexo.onItemSelectedListener = object : AdapterView.OnItemSelectedListener {
             override fun onItemSelected(parent: AdapterView<*>?, view: android.view.View?, position: Int, id: Long) {
                 val selectedSexo = parent?.getItemAtPosition(position).toString()
@@ -52,7 +61,34 @@ class ActivityPatientData : AppCompatActivity() {
                 // No hacer nada si no se selecciona nada
             }
         }
+        */
 
+        editTextDate = findViewById(R.id.editTextDate)
+
+        calendar.set(Calendar.YEAR, calendar.get(Calendar.YEAR) - 44)
+        calendar.set(Calendar.MONTH, Calendar.JULY)
+        calendar.set(Calendar.DAY_OF_MONTH, 1)
+
+        val dateSetListener = DatePickerDialog.OnDateSetListener { _, year, month, day ->
+            calendar.set(Calendar.YEAR, year)
+            calendar.set(Calendar.MONTH, month)
+            calendar.set(Calendar.DAY_OF_MONTH, day)
+            updateLabel()
+        }
+
+        editTextDate.setOnClickListener {
+            DatePickerDialog(
+                this,
+                dateSetListener,
+                calendar.get(Calendar.YEAR),
+                calendar.get(Calendar.MONTH),
+                calendar.get(Calendar.DAY_OF_MONTH)
+            ).show()
+        }
+
+        updateLabel()
+
+        /*
         // Obtener los Spinners del layout
         val spinnerYear: Spinner = findViewById(R.id.spinnerYear)
         val spinnerMonth: Spinner = findViewById(R.id.spinnerMonth)
@@ -117,7 +153,17 @@ class ActivityPatientData : AppCompatActivity() {
             override fun onNothingSelected(parentView: AdapterView<*>?) {
                 // No hacer nada si no se selecciona nada
             }
-        }
+        } */
+    }
+
+    private fun updateLabel() {
+        val format = SimpleDateFormat("dd/MM/yyyy", Locale.getDefault())
+        editTextDate.setText(format.format(calendar.time))
+    }
+
+    fun goToHome(view: View) {
+        val intent = Intent(this, MainActivity::class.java)
+        startActivity(intent)
     }
 }
 
