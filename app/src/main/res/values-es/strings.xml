@@ -21,4 +21,8 @@
     <string name="pedir_cita">Pedir cita</string>
     <string name="seleccione_sexo">Seleccione sexo</string>
     <string name="sexo">Sexo:</string>
+    <string name="medical_history">Antecedentes médicos</string>
+    <string name="volver">Volver</string>
+    <string name="editar">Editar</string>
+    <string name="services">Servicios médicos</string>
 </resources>

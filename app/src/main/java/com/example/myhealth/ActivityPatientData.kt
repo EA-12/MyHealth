@@ -1,11 +1,13 @@
 package com.example.myhealth
 
+import android.annotation.SuppressLint
 import android.app.DatePickerDialog
 import android.content.Intent
 import android.os.Bundle
 import android.view.View
 import android.widget.AdapterView
 import android.widget.ArrayAdapter
+import android.widget.Button
 import android.widget.EditText
 import android.widget.Spinner
 import android.widget.Toast
@@ -21,6 +23,7 @@ class ActivityPatientData : AppCompatActivity() {
     private lateinit var editTextDate: EditText
     private val calendar = Calendar.getInstance()
 
+    @SuppressLint("CutPasteId")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
@@ -48,6 +51,10 @@ class ActivityPatientData : AppCompatActivity() {
 
         // Asignar el adaptador al Spinner
         spinnerSexo.adapter = adapterSexo
+        spinnerSexo.setSelection(2)
+        spinnerSexo.isEnabled = false
+        spinnerSexo.isClickable = false
+        spinnerSexo.isFocusable = false
 
         // Configurar el listener para detectar la selección
         /*
@@ -154,6 +161,30 @@ class ActivityPatientData : AppCompatActivity() {
                 // No hacer nada si no se selecciona nada
             }
         } */
+        val botonEditar = findViewById<Button>(R.id.buttonEdit)
+        val botonGuardar = findViewById<Button>(R.id.buttonSave)
+
+        val campos = listOf<EditText>(
+            findViewById(R.id.editTextName),
+            findViewById(R.id.editTextSurname),
+            findViewById(R.id.editTextID),
+            findViewById(R.id.editTextTlf),
+            findViewById(R.id.editTextDate),
+            findViewById(R.id.editTextCountry),
+            findViewById(R.id.editTextPostalCode),
+            findViewById(R.id.editTextAddress)
+        )
+
+        botonEditar.setOnClickListener {
+            for (campo in campos) campo.isEnabled = true
+            spinnerSexo.isEnabled = true
+        }
+
+        botonGuardar.setOnClickListener {
+            for (campo in campos) campo.isEnabled = false
+            spinnerSexo.isEnabled = false
+            Toast.makeText(this, "Datos guardados", Toast.LENGTH_SHORT).show()
+        }
     }
 
     private fun updateLabel() {

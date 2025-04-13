@@ -20,5 +20,9 @@
     <string name="pedir_cita">Book an appointment</string>
     <string name="seleccione_sexo">Select sex</string>
     <string name="sexo">Sex:</string>
+    <string name="medical_history">Medical history</string>
+    <string name="volver">Return</string>
+    <string name="editar">Edit</string>
+    <string name="services">Medical services</string>
 
 </resources>
