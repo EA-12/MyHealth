@@ -19,6 +19,12 @@
             android:name=".ActivityPatientData"
             android:exported="false" />
         <activity
+            android:name=".ActivityMedicalHistory"
+            android:exported="false"/>
+        <activity
+            android:name=".ActivityServices"
+            android:exported="false"/>
+        <activity
             android:name=".MainActivity"
             android:exported="true">
             <intent-filter>

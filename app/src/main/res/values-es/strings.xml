@@ -25,4 +25,7 @@
     <string name="volver">Volver</string>
     <string name="editar">Editar</string>
     <string name="services">Servicios médicos</string>
+    <string name="confirmar_cita">Confirmar cita</string>
+    <string name="pick_a_date">Seleccione una fecha</string>
+    <string name="return_button">Volver</string>
 </resources>
