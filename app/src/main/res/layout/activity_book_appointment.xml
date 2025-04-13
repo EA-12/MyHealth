@@ -8,60 +8,160 @@
     tools:context=".ActivityBookAppointment"
     tools:ignore="ExtraText">
 
-    <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/textInputLayout"
-        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
-        android:layout_width="395dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginEnd="8dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/timePickerId"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent">
+<!--
+<com.google.android.material.textfield.TextInputLayout
+    android:id="@+id/textInputLayout"
+    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+    android:layout_width="395dp"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="8dp"
+    android:layout_marginEnd="8dp"
+    app:layout_constraintBottom_toBottomOf="parent"
+    app:layout_constraintEnd_toStartOf="@+id/timePickerId"
+    app:layout_constraintHorizontal_bias="0.0"
+    app:layout_constraintStart_toStartOf="parent">
 
-    </com.google.android.material.textfield.TextInputLayout>
+</com.google.android.material.textfield.TextInputLayout>
 
-    <TimePicker
-        android:id="@+id/timePickerId"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_marginBottom="370dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.0"
-        android:contentDescription="@string/seleccione_la_hora"
-        tools:ignore="ExtraText"/>
+<CalendarView
+    android:id="@+id/calendarView"
+    android:layout_width="327dp"
+    android:layout_height="320dp"
+    android:layout_marginTop="10dp"
+    app:layout_constraintBottom_toBottomOf="parent"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toBottomOf="@+id/timePickerId"
+    app:layout_constraintVertical_bias="1.0"
+    android:contentDescription="@string/seleccione_una_fecha" />
 
-    <CalendarView
-        android:id="@+id/calendarView"
-        android:layout_width="327dp"
-        android:layout_height="320dp"
-        android:layout_marginTop="10dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/timePickerId"
-        app:layout_constraintVertical_bias="1.0"
-        android:contentDescription="@string/seleccione_una_fecha"
-    />
+<TimePicker
+    android:id="@+id/timePickerId"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginBottom="370dp"
+    app:layout_constraintBottom_toBottomOf="parent"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintHorizontal_bias="0.0"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toTopOf="parent"
+    app:layout_constraintVertical_bias="0.0"
+    android:contentDescription="@string/seleccione_la_hora"
+    tools:ignore="ExtraText"/>
 
-    <Button
-        android:id="@+id/button3"
+<Button
+    android:id="@+id/button3"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="291dp"
+    android:layout_marginTop="5dp"
+    android:layout_marginEnd="21dp"
+    android:layout_marginBottom="3dp"
+    android:onClick="goToMainActivity"
+    android:text="@string/guardar_cita"
+    app:layout_constraintBottom_toTopOf="@+id/calendarView"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toBottomOf="@+id/timePickerId" />
+    -->
+
+    <TextView
+        android:id="@+id/textViewAppointment"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="291dp"
-        android:layout_marginTop="5dp"
-        android:layout_marginEnd="21dp"
-        android:layout_marginBottom="3dp"
-        android:onClick="goToMainActivity"
-        android:text="@string/guardar_cita"
-        app:layout_constraintBottom_toTopOf="@+id/calendarView"
+        android:layout_marginStart="147dp"
+        android:layout_marginTop="35dp"
+        android:layout_marginEnd="148dp"
+        android:layout_marginBottom="677dp"
+        android:text="@string/pedir_cita"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/timePickerId" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0" />
+
+
+    <!--
+    <DatePicker
+        android:id="@+id/datePicker"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:calendarViewShown="true"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+    -->
+
+    <TextView
+        android:id="@+id/textViewAppointmentDate"
+        android:layout_width="225dp"
+        android:layout_height="22dp"
+        android:text="Seleccione una fecha:"
+        android:textSize="14sp"
+        android:layout_marginTop="24dp"
+        app:layout_constraintBottom_toTopOf="@+id/editTextDate"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.142"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewAppointment" />
+
+    <EditText
+        android:id="@+id/editTextDate"
+        android:layout_width="247dp"
+        android:layout_height="54dp"
+        android:layout_marginBottom="4dp"
+        android:clickable="true"
+        android:cursorVisible="false"
+        android:drawableEnd="@android:drawable/ic_menu_today"
+        android:enabled="true"
+        android:focusable="true"
+        android:hint="@string/pick_a_date"
+        android:inputType="none"
+        android:textSize="14sp"
+        app:layout_constraintBottom_toTopOf="@+id/textViewAppointmentTime"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.152"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:ignore="KeyboardInaccessibleWidget,TextFields" />
+
+    <TimePicker
+        android:id="@+id/appointmentTimePicker"
+        android:layout_width="249dp"
+        android:layout_height="202dp"
+        android:timePickerMode="spinner"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.154"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewAppointmentTime" />
+
+    <TextView
+        android:id="@+id/textViewAppointmentTime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="16dp"
+        android:text="Seleccione una hora:"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.036"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/editTextDate" />
+
+    <Button
+        android:id="@+id/buttonConfirm"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="44dp"
+        android:backgroundTint="@color/theme_primary"
+        android:onClick="goToMainActivity"
+        android:text="@string/confirmar_cita"
+        android:textSize="14sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/appointmentTimePicker"
+        app:layout_constraintVertical_bias="0.0" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
